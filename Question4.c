@@ -1,19 +1,17 @@
 /*
    Requirement:
                The program gets an integer from the user and checks whether it
-               is a prime number. It displays whether the number is
-               prime or not prime.
+               is divisible by 2. It displays whether the number is even or odd.
                
    Design (Algorithm):
-
-                      1.Get an integer from the user using scanf().
-                      2.Use an if-else statement and a for loop to check 
-                        how many numbers divide it exactly.
-                      3.If the number has exactly two divisors, display 
-                        Prime number; otherwise, display Not a prime number.
+                     1.Ues an integer from the user using scanf().
+                     2.Use the("if-else") statement and (%)operator to check
+                       whether the number is divisible by 2.
+                    3.Display Even number if the remainder is 0;
+                      otherwise, display Odd number.
    Output:                       
-            Example 1:Enter a number:5   Example 2:Enter a number:6
-                      Prime number                 Not a prime number
+            Example 1:Enter a number:10    Example 2:Enter a number:9
+                      Even number               Odd number
             
 */    
 
@@ -21,33 +19,18 @@
 
 int main()
 {
-    int num, i, count = 0;
+    int num;
 
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    if (num < 2)
+    if (num % 2 == 0)
     {
-        printf("Not a prime number");
+        printf("Even number");
     }
     else
     {
-        for (i = 1; i <= num; i++)
-        {
-            if (num % i == 0)
-            {
-                count++;
-            }
-        }
-
-        if (count == 2)
-        {
-            printf("Prime number");
-        }
-        else
-        {
-            printf("Not a prime number");
-        }
+        printf("Odd number");
     }
 
     return 0;
